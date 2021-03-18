@@ -14,7 +14,14 @@ import {
    HeadingUser,
    UpdateDesc,
    UserDesc,
+   UpdateBtn,
+   UpdateBack,
+   BackBtn,
+   BackDesc,
+
 } from '../components/Dashboard/Element'
+
+import { BiArrowBack } from 'react-icons/bi'
 
 
 const Dashboard = () => {
@@ -36,18 +43,18 @@ const Dashboard = () => {
                   </HeadingUser>
                   <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                      <Update>
-                        <UpdateDesc>Whats New?</UpdateDesc>
-                        <button onClick={handleClick}>Click to flip</button>
+                        <UpdateDesc >Whats New?</UpdateDesc>
+                        <UpdateBtn onClick={handleClick}>v0.0.01 alpha</UpdateBtn>
                      </Update>
 
-                     <Update>
-                        This is the back of the card.
-                        <button onClick={handleClick}>Click to flip</button>
-                     </Update>
+                     <UpdateBack>
+                        <UpdateDesc >Updates</UpdateDesc>
+                        <BackDesc>Cryptocurency Visual Viewer</BackDesc>
+                        <BackDesc>Dynamic Charts</BackDesc>
+                        <BackDesc>Online Wallet</BackDesc>
+                        <BackBtn onClick={handleClick}> <BiArrowBack /> </BackBtn>
+                     </UpdateBack>
                   </ReactCardFlip>
-                  {/* <Update>
-                  <UpdateDesc> Whats New? </UpdateDesc>
-               </Update> */}
                </DashHeading>
                <DashArticle>
 

@@ -31,9 +31,49 @@ export const Update = styled.div`
    background-color: var(--primary);
    border-radius: 15px;
 `
+
+export const UpdateBack = styled.div`
+   width: 350px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 2rem;
+   background-color: var(--primary);
+   border-radius: 15px;
+`
+
 export const UpdateDesc = styled.h1`
-   font-family: var(--inter);
+   font-family: var(--poppins);
    color: #fff;
+`
+
+export const BackDesc = styled.p`
+   font-family: var(--inter);
+   color: var(--secondary);
+   font-size: 14px;
+   font-weight: 600;
+   font-style: italic;
+   padding: 0.50rem;
+`
+
+export const UpdateBtn = styled.button`
+   background: transparent;
+   font-family: var(--poppins);
+   color: var(--secondary);
+   font-style: italic;
+   border: none;
+   cursor: pointer;
+`
+
+export const BackBtn = styled.button`
+   width: 20px;
+   height: 20px;
+   background: transparent;
+   font-family: var(--poppins);
+   color: var(--secondary);
+   font-size: 1rem;
+   border: none;
+   cursor: pointer;
 `
 
 export const HeadingUser = styled.div`
@@ -43,12 +83,11 @@ export const HeadingUser = styled.div`
 `
 
 export const UserDesc = styled.h1`
-   font-family: var(--inter);
+   font-family: var(--poppins);
 `
 
 export const DashArticle = styled.div`
    width: 100%;
    height: 40vh;
-   background-color: var(--primary);
    border-radius: 15px;
 `
