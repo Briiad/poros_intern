@@ -4,6 +4,7 @@ import axios from 'axios'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import SideNav from "../../components/SideNav"
+import Datacharts from '../../components/Cryptoview/datacharts'
 
 import {
    CryptoContainer,
@@ -16,10 +17,9 @@ import {
    DataVisContainer,
    SearchForm,
    SearchInput,
-   SearchTitle,
+
 } from '../../components/Cryptoview/Elements'
 
-import DataVisual from '../../components/Cryptoview/datavisual'
 import Datavisual from "../../components/Cryptoview/datavisual"
 
 const Cryptoview = () => {
@@ -31,7 +31,6 @@ const Cryptoview = () => {
       axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=idr&order=market_cap_desc&per_page=100&page=1&sparkline=false')
          .then(res => {
             setMarket(res.data);
-            console.log(res.data);
          }).catch(err => console.log(err));
    }, []);
 
@@ -50,9 +49,21 @@ const Cryptoview = () => {
             <SideNav />
             <DataContainer>
 
+               <DataCharts>
+                  <DataChartsVis>
+                     <DataChartsItem>
+                        <Datacharts />
+                     </DataChartsItem>
+
+                     <DataChartsItem>
+
+                     </DataChartsItem>
+                  </DataChartsVis>
+               </DataCharts>
+
+
                <CryptoContainer>
                   <DataChartsSearch>
-                     <SearchTitle>Search for Currency</SearchTitle>
                      <SearchForm>
                         <SearchInput
                            type="text"
@@ -80,30 +91,6 @@ const Cryptoview = () => {
 
                   </DataVisContainer>
                </CryptoContainer>
-
-               <DataCharts>
-
-                  <DataChartsVis>
-                     <DataChartsItem>
-                        <h1>Helo</h1>
-                     </DataChartsItem>
-
-                     <DataChartsItem>
-                        <h1>Helo</h1>
-                     </DataChartsItem>
-
-                     <DataChartsItem>
-                        <h1>Helo</h1>
-                     </DataChartsItem>
-
-                     <DataChartsItem>
-                        <h1>Helo</h1>
-                     </DataChartsItem>
-                  </DataChartsVis>
-
-
-
-               </DataCharts>
 
             </DataContainer>
          </DashWrapper>

@@ -49,7 +49,7 @@ export const UpdateDesc = styled.h1`
 
 export const BackDesc = styled.p`
    font-family: var(--inter);
-   color: var(--secondary);
+   color: var(--text-secondary);
    font-size: 14px;
    font-weight: 600;
    font-style: italic;
@@ -59,7 +59,7 @@ export const BackDesc = styled.p`
 export const UpdateBtn = styled.button`
    background: transparent;
    font-family: var(--poppins);
-   color: var(--secondary);
+   color: var(--text-secondary);
    font-style: italic;
    border: none;
    cursor: pointer;
@@ -70,7 +70,7 @@ export const BackBtn = styled.button`
    height: 20px;
    background: transparent;
    font-family: var(--poppins);
-   color: var(--secondary);
+   color: var(--text-secondary);
    font-size: 1rem;
    border: none;
    cursor: pointer;

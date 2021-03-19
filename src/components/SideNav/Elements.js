@@ -10,7 +10,7 @@ export const Sidenav = styled.nav`
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   background: var(--primary);
+   background: var(--tersier);
 `
 
 export const NavLogo = styled(BiBitcoin)`
@@ -19,14 +19,14 @@ export const NavLogo = styled(BiBitcoin)`
    display: flex;
    align-items: center;
    padding: 1rem;
-   color: #fff;
+   color: var(--option-primary);
    background-color: var(--secondary);
 `
 
 export const NavMenu = styled.ul`
    display: flex;
-   align-items: flex-start;
    flex-direction: column;
+   justify-content: center;
    width: 70px;
    height: 100%;
 `

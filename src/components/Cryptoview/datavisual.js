@@ -6,13 +6,16 @@ import {
    MarketName,
    MarketData,
    MarketPrice,
-   MarketVolume,
+   MarketSymbol,
+   MarketCap,
    Market,
    MarketRed,
    MarketGreen,
 } from './Elements'
 
-function Datavisual({ image, name, symbol, price, volume, priceChange, marketcap }) {
+import { GoArrowDown, GoArrowUp } from 'react-icons/go'
+
+function Datavisual({ image, name, symbol, price, priceChange, marketcap }) {
    return (
       <>
          <DataVisual>
@@ -23,12 +26,13 @@ function Datavisual({ image, name, symbol, price, volume, priceChange, marketcap
                </Market>
 
                <MarketData>
-                  <MarketPrice>IDR{price.toLocaleString()}</MarketPrice>
-                  <MarketVolume>IDR{volume.toLocaleString()}</MarketVolume>
+                  {/* <MarketSymbol>{symbol}</MarketSymbol> */}
                   {priceChange < 0 ? (
-                     <MarketRed>{priceChange.toFixed(2)}%</MarketRed>
-                  ) : <MarketGreen>{priceChange.toFixed(2)}%</MarketGreen>
+                     <MarketRed><GoArrowDown />{priceChange.toFixed(2)}%</MarketRed>
+                  ) : <MarketGreen><GoArrowUp />{priceChange.toFixed(2)}%</MarketGreen>
                   }
+                  {/* <MarketPrice>IDR{price.toLocaleString()}</MarketPrice> */}
+                  {/* <MarketCap>IDR{marketcap.toLocaleString()}</MarketCap> */}
                </MarketData>
 
 
