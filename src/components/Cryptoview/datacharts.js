@@ -29,7 +29,7 @@ function Datacharts() {
                      label: 'change percentage',
                      data: emp1h,
                      borderWidth: 1,
-                     backgroundColor: ['rgba(123, 44, 191, 0.2)']
+                     backgroundColor: ['rgba(255, 191, 10, 0.2)']
                   }
                ]
             })

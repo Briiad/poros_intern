@@ -96,12 +96,5 @@ export const Footer = styled.section`
    width : 100%;
    height : 40vh;
    display: flex;
-   background-color: #1a1a1a;
-`
-
-export const SectionBreak = styled.section`
-   width: 100%;
-   height: 40vh;
-   display: flex;
-   background: var(--tersier);
+   background-color: #2e2e2e;
 `

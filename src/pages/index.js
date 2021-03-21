@@ -19,7 +19,6 @@ import {
    FeaturesPage,
    DashboardPage,
    Footer,
-   SectionBreak,
    AboutImgCont,
    AboutDesc,
    AboutH1,
