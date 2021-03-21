@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react"
 import axios from 'axios'
 
+//COMPONENTS
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import SideNav from "../../components/SideNav"
 import Datacharts from '../../components/Cryptoview/datacharts'
+import Datavisual from '../../components/Cryptoview/datavisual'
 
+//STYLED COMPONENTS
 import {
    CryptoContainer,
    DashWrapper,
@@ -20,7 +23,6 @@ import {
 
 } from '../../components/Cryptoview/Elements'
 
-import Datavisual from "../../components/Cryptoview/datavisual"
 
 const Cryptoview = () => {
 

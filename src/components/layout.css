@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --poppins: "Poppins", sans-serif;
   --inter: "Inter", sans-serif;

@@ -109,6 +109,7 @@ export const DataVisual = styled.div`
 
    &:hover{
       background-color: #e0e0e0;
+      cursor: pointer;
    }
 `
 
