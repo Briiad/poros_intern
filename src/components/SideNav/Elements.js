@@ -20,7 +20,7 @@ export const NavLogo = styled(BiBitcoin)`
    align-items: center;
    padding: 1rem;
    color: var(--option-primary);
-   background-color: var(--secondary);
+   background-color: var(--text-secondary);
 `
 
 export const NavMenu = styled.ul`

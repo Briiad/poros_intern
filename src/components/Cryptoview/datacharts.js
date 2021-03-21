@@ -22,30 +22,27 @@ function Datacharts() {
                emp1h.push(parseFloat(dataObj.price_change_percentage_14d_in_currency.toFixed(2)))
                emp1h.push(parseFloat(dataObj.price_change_percentage_30d_in_currency.toFixed(2)))
             }
+            setChartData({
+               labels: empName,
+               datasets: [
+                  {
+                     label: 'change percentage',
+                     data: emp1h,
+                     borderWidth: 1,
+                     backgroundColor: ['rgba(123, 44, 191, 0.2)']
+                  }
+               ]
+            })
          }).catch(err => {
             alert(err);
          });
 
       //console.log(emp1h, empName);
-
-      setChartData({
-         labels: empName,
-         datasets: [
-            {
-               label: 'change percentage',
-               data: emp1h,
-               borderWidth: 1,
-               backgroundColor: ['rgba(123, 44, 191, 0.2)']
-            }
-         ]
-      })
    };
 
    useEffect(() => {
       chart()
    }, [])
-
-
 
    return (
       <>

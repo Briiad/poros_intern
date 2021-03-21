@@ -10,7 +10,8 @@ import {
    NavItems,
    NavLinks,
    NavLogo,
-   NavMenu
+   NavMenu,
+   Span
 } from './Elements'
 
 function Navbar() {
@@ -47,13 +48,10 @@ function Navbar() {
 
             <NavMenu onClick={handleClick} click={click}>
                <NavItems>
-                  <NavLinks>Home</NavLinks>
+                  <NavLinks to="user/login">Log in</NavLinks>
                </NavItems>
                <NavItems>
-                  <NavLinks>Log in</NavLinks>
-               </NavItems>
-               <NavItems>
-                  <NavLinks>Sign up</NavLinks>
+                  <NavLinks to="user/signup"><Span>Sign up</Span></NavLinks>
                </NavItems>
             </NavMenu>
          </NavContainer>

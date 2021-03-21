@@ -3,13 +3,15 @@ import { Link } from 'gatsby'
 import { DiOpensource } from 'react-icons/di'
 
 export const Nav = styled.nav`
-   background-color: ${({ active }) => active ? "rgba(0, 0, 0, 0.7)" : "rgba(0, 0, 0, 0.6)"};
+   background-color: ${({ active }) => active ? "rgba(0, 0, 0, 0.8)" : "transparent"};
+   /* background-color: transparent; */
    height: 80px;
+   width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
    font-size: 1rem;
-   position: sticky;
+   position: fixed;
    top:0;
    z-index: 900;
    font-family: var(--poppins);
@@ -115,5 +117,21 @@ export const NavLinks = styled(Link)`
    &:hover{
          color: var(--text-secondary);
          transition: all 0.2s ease;
+   }
+`
+
+export const Span = styled.span`
+   border: 1.2px solid var(--text-secondary);
+   padding: 0.75rem;
+   border-radius: 5px;
+   color: var(--text-secondary);
+   transition: all 0.2s ease;
+
+
+   &:hover{
+      color: #fff;
+      border:1.2px solid transparent;
+      background-color: var(--text-secondary);
+      transition: all 0.2s ease;
    }
 `
