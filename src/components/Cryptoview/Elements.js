@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const DashWrapper = styled.div`
    display: flex;
-   background-color: #f2f5f5;
+   background-color: #1a1a1a;
 `
 
 export const DataContainer = styled.div`
@@ -43,8 +43,8 @@ export const DataChartsItem = styled.div`
    padding: 1rem;
    justify-content: center;
    align-items: center;
-   background-color: var(--option-primary);
-   box-shadow: 0 0 5px #dbdbdb;
+   background-color: #2e2e2e;
+   box-shadow: 0 0 5px #242424;
 `
 
 // CRYPTOVIEW
@@ -73,8 +73,8 @@ export const SearchInput = styled.input`
    font-family: var(--inter);
    border: none;
    border-radius: 5px;
-   background-color: var(--option-primary);
-   box-shadow: 0 0 5px #dbdbdb; 
+   background-color: #2e2e2e;
+   color: var(--option-primary);
    outline: none;
 `
 
@@ -92,9 +92,8 @@ export const DataVisContainer = styled.div`
    flex-direction: column;
    color: var(--option-secondary);
    overflow-y: scroll;
-   background-color: var(--option-primary);
+   background-color: #2e2e2e;
    border-radius: 5px;
-   box-shadow: 0 0 5px #dbdbdb;
 
    &::-webkit-scrollbar{
       display: none;
@@ -108,7 +107,7 @@ export const DataVisual = styled.div`
    font-size: 14px;
 
    &:hover{
-      background-color: #e0e0e0;
+      background-color: #3d3d3d;
       cursor: pointer;
    }
 `
@@ -121,7 +120,7 @@ export const VisualRow = styled.div`
    padding: 1rem;
    height: 80px;
    width: 100%;
-   border-bottom: 2px solid #f2f5f5;
+   border-bottom: 2px solid #242424;
 `
 
 export const Market = styled.div`
@@ -130,6 +129,7 @@ export const Market = styled.div`
    justify-content: space-around;
    padding-right: 24px;
    width: 70%;
+   color: var(--option-primary);
 `
 
 export const MarketImg = styled.img`

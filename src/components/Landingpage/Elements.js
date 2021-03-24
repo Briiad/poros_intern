@@ -45,7 +45,7 @@ export const AboutImgCont = styled.div`
    font-size: 3rem;
    font-family: var(--poppins);
    font-weight: 700;
-   background-color: rgba(0,0,0,0.6);
+   background-color: rgba(9,9,9,0.6);
    border-radius: 7px;
 `
 
@@ -80,16 +80,83 @@ export const GoldSpan = styled.span`
 
 export const FeaturesPage = styled.section`
    width : 100%;
-   height : 80vh;
+   height : 100vh;
    display: flex;
+   justify-content: space-around;
+   align-items: center;
    background-color: #1a1a1a;
+`
+
+export const FeatureHeader = styled.div`
+   width: 40%;
+   height: 30%;
+   font-family: var(--poppins);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+`
+
+export const FeatureHeaderH1 = styled.h1`
+   color: var(--option-primary);
+   font-size: 32px;
+`
+
+export const FeatureMenu = styled.div`
+   width: 40%;
+   height: 70%;
+   display: grid;
+   grid-template-columns: 200px 200px;
+   grid-template-rows: 200px 200px;
+   column-gap: 40px;
+   row-gap: 40px;
+   padding: 1rem;
+   justify-content: center;
+`
+
+export const FeatureItems = styled.div`
+   background-color: rgba(9,9,9,0.6);
+   color: var(--text-secondary);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 3rem;
+   border-radius: 5px;
 `
 
 export const DashboardPage = styled.section`
    width : 100%;
-   height : 100vh;
+   height : 80vh;
    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 1rem;
    background-color: #1a1a1a;
+`
+
+export const DashHeader = styled.h1`
+   font-family: var(--poppins);
+   color: var(--option-primary);
+   font-size: 4rem;
+`
+
+export const DashBtn = styled.button`
+   width: 20%;
+   padding: 2rem;
+   background: none;
+   font-family: var(--poppins);
+   font-size: 18px;
+   color: var(--text-secondary);
+   border: 1px solid var(--text-secondary);
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+
+   &:hover{
+      background-color: var(--text-secondary);
+      color: var(--option-primary);
+      transition: all 0.2s ease;
+   }
 `
 
 export const Footer = styled.section`

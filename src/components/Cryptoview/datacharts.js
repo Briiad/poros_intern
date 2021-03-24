@@ -26,10 +26,16 @@ function Datacharts() {
                labels: empName,
                datasets: [
                   {
-                     label: 'change percentage',
+                     label: 'Percentage',
                      data: emp1h,
                      borderWidth: 1,
-                     backgroundColor: ['rgba(255, 191, 10, 0.2)']
+                     backgroundColor: [
+                        'rgba(255, 191, 10, 0.5)',
+                        'rgba(255, 191, 10, 0.5)',
+                        'rgba(255, 191, 10, 0.5)',
+                        'rgba(255, 191, 10, 0.5)',
+                        'rgba(255, 191, 10, 0.5)'
+                     ]
                   }
                ]
             })
@@ -51,12 +57,28 @@ function Datacharts() {
             data={chartData}
             options={{
                responsive: true,
-               title: { text: 'Crypto Chart', display: true },
+               title: { text: 'Crypto Chart', display: true, fontColor: "white" },
+               legend: {
+                  labels: {
+                     fontColor: "white"
+                  }
+               },
                scales: {
                   yAxes: [
                      {
                         ticks: {
-                           autoSkip: true,
+                           fontColor: "white",
+                           stepSize: 1,
+                           maxTicksLimit: 10,
+                           beginAtZero: true
+                        }
+                     }
+                  ],
+                  xAxes: [
+                     {
+                        ticks: {
+                           fontColor: "white",
+                           stepSize: 1,
                            maxTicksLimit: 10,
                            beginAtZero: true
                         }
