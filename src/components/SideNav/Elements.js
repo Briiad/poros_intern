@@ -52,3 +52,21 @@ export const NavLinks = styled(Link)`
    }
 `
 
+export const NavLogout = styled(Link)`
+   width: 70px;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   list-style: none;
+   color: #fff;
+   font-size: 1.25rem;
+   opacity: 0.7;
+   cursor: pointer;
+
+   &:hover{
+      opacity: 1;
+   }
+`
+

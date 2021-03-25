@@ -1,15 +1,29 @@
-import React from 'react'
-import { AiFillHome, AiFillFund, AiFillWallet } from 'react-icons/ai'
+import React, { useContext } from 'react'
+import { AiFillHome, AiFillFund, AiFillWallet, AiOutlineLogout } from 'react-icons/ai'
+import firebase from 'gatsby-plugin-firebase'
+import { navigate } from 'gatsby'
+import { AuthContext } from '../../Context/auth'
+
 
 import {
    NavItem,
    NavLinks,
    NavLogo,
+   NavLogout,
    NavMenu,
    Sidenav,
 } from './Elements';
 
 function SideNav() {
+
+   const { user } = useContext(AuthContext);
+
+   const handleLogout = async () => {
+      await firebase.auth().signOut()
+      navigate("/")
+      console.log("logout berhasil")
+   }
+
    return (
       <Sidenav>
          <NavLogo />
@@ -24,6 +38,11 @@ function SideNav() {
                <NavLinks to="/dashboard/wallet" > <AiFillWallet /> </NavLinks>
             </NavItem>
          </NavMenu>
+         <p onClick={handleLogout}>
+            <NavLogout >
+               <AiOutlineLogout />
+            </NavLogout>
+         </p>
       </Sidenav>
    )
 }
