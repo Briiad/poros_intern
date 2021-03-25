@@ -21,7 +21,7 @@ import {
    SignWrapper
 } from '../../components/Signup/Elements'
 
-function Signup() {
+function Login() {
    return (
       <>
          <Layout>
@@ -30,12 +30,11 @@ function Signup() {
             <SignWrapper>
                <SignContainer>
                   <FormContainer>
-                     <SignHeader>Sign up</SignHeader>
+                     <SignHeader>Log in</SignHeader>
                      <SignForm>
-                        <SignInput type="input" name="name" placeholder="name" required autoComplete="off" />
-                        <SignInput type="input" name="email" placeholder="email" required autoComplete="off" />
+                        <SignInput type="email" name="email" placeholder="email" required autoComplete="off" />
                         <SignInput type="password" name="password" placeholder="password" required />
-                        <SignBtn>CREATE ACCOUNT</SignBtn>
+                        <SignBtn type="submit">LOG IN</SignBtn>
                      </SignForm>
                      <AccCheck>
                         <AccP>Already have an account?</AccP>
@@ -52,4 +51,4 @@ function Signup() {
    )
 }
 
-export default Signup
+export default Login
