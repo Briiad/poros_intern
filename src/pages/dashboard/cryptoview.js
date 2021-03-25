@@ -22,17 +22,20 @@ import {
    SearchInput,
 
 } from '../../components/Cryptoview/Elements'
-
+import Datadesc from "../../components/Cryptoview/datadecs"
 
 const Cryptoview = () => {
 
    const [markets, setMarket] = useState([]);
+   const [decs, setDesc] = useState([]);
    const [search, setSearch] = useState('');
 
    useEffect(() => {
-      axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=idr&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+      axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=idr&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30')
          .then(res => {
             setMarket(res.data);
+            setDesc(res.data[0]);
+            console.log(res.data[0]);
          }).catch(err => console.log(err));
    }, []);
 
@@ -58,7 +61,17 @@ const Cryptoview = () => {
                      </DataChartsItem>
 
                      <DataChartsItem>
-
+                        {[decs].map(d => {
+                           return (
+                              <Datadesc
+                                 key={d.id}
+                                 name={d.name}
+                                 price={d.current_price}
+                                 rank={d.market_cap_rank}
+                                 cap={d.market_cap}
+                              />
+                           );
+                        })}
                      </DataChartsItem>
                   </DataChartsVis>
                </DataCharts>

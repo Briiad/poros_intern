@@ -159,10 +159,6 @@ export const MarketPrice = styled.p`
    text-align: center;
 `
 
-export const MarketCap = styled.p`
-
-`
-
 export const MarketRed = styled.p`
    width: 90px;
    color: red;
@@ -173,4 +169,12 @@ export const MarketGreen = styled.p`
    width: 90px;
    color: #32ed64;
    font-weight: 700;
+`
+
+export const DatadecsWrapper = styled.div`
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 0.5rem;
 `

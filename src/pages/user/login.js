@@ -45,6 +45,7 @@ function Login() {
          const res = await firebase.auth().signInWithEmailAndPassword(data.email, data.password)
          setUser(res)
          navigate("/dashboard")
+         alert("Berhasil login")
       } catch (err) {
          setData({ ...data, error: err.message })
       }
@@ -65,8 +66,8 @@ function Login() {
                         <SignBtn type="submit">LOG IN</SignBtn>
                      </SignForm>
                      <AccCheck>
-                        <AccP>Already have an account?</AccP>
-                        <RedirToLogin to="/user/login">Log in</RedirToLogin>
+                        <AccP>New to Crypvis?</AccP>
+                        <RedirToLogin to="/user/signup">Sign up here!</RedirToLogin>
                      </AccCheck>
                   </FormContainer>
                   <InfoContainer>

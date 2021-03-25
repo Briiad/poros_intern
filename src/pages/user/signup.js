@@ -45,6 +45,8 @@ function Signup() {
          const res = await firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
          setUser(res)
          navigate("/user/login")
+         alert("Berhasil membuat akun")
+         console.log(res);
       } catch (err) {
          setData({ ...data, error: err.message })
       }

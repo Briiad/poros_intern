@@ -12,6 +12,7 @@ export const DashContainer = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: space-around;
+   background-color: #1a1a1a;
 `
 
 export const DashHeading = styled.div`
@@ -28,7 +29,7 @@ export const Update = styled.div`
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   background-color: var(--primary);
+   background-color: var(--option-secondary);
    border-radius: 15px;
 `
 
@@ -38,7 +39,7 @@ export const UpdateBack = styled.div`
    display: flex;
    flex-direction: column;
    padding: 2rem;
-   background-color: var(--primary);
+   background-color: var(--option-secondary);
    border-radius: 15px;
 `
 
@@ -84,6 +85,7 @@ export const HeadingUser = styled.div`
 
 export const UserDesc = styled.h1`
    font-family: var(--poppins);
+   color: var(--option-primary);
 `
 
 export const DashArticle = styled.div`

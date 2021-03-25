@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { Bar, Line } from 'react-chartjs-2'
 
@@ -57,7 +57,7 @@ function Datacharts() {
             data={chartData}
             options={{
                responsive: true,
-               title: { text: 'Crypto Chart', display: true, fontColor: "white" },
+               title: { text: 'Bitcoin Chart', display: true, fontColor: "white" },
                legend: {
                   labels: {
                      fontColor: "white"

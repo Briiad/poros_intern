@@ -21,7 +21,7 @@ function SideNav() {
    const handleLogout = async () => {
       await firebase.auth().signOut()
       navigate("/")
-      console.log("logout berhasil")
+      alert("logout berhasil")
    }
 
    return (
