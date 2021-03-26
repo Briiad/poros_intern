@@ -178,3 +178,16 @@ export const DatadecsWrapper = styled.div`
    flex-direction: column;
    padding: 0.5rem;
 `
+
+export const DatadescH1 = styled.h1`
+   font-family: var(--poppins);
+   color: var(--option-primary);
+   font-size: 24px;
+   font-weight: 700;
+`
+
+export const DatadescP = styled.p`
+   font-family: var(--poppins);
+   color: var(--option-primary);
+   font-size: 14px;
+`

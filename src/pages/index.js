@@ -3,6 +3,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { graphql } from 'gatsby'
 import { AiOutlineLineChart, AiOutlineWallet, } from 'react-icons/ai';
 import { FaBitcoin, FaUserShield } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 //ADDITIONAL CSS
 import '../components/Landingpage/parallaxBg.css'
@@ -11,6 +12,7 @@ import '../components/Landingpage/parallaxBg.css'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from '../components/Navbar'
+import { DiOpensource } from 'react-icons/di'
 
 //STYLED COMPONENTS
 import {
@@ -33,6 +35,7 @@ import {
    FeatureHeaderH1,
    DashHeader,
    DashBtn,
+   HeaderSub,
 } from '../components/Landingpage/Elements'
 
 const IndexPage = (props) => (
@@ -40,15 +43,23 @@ const IndexPage = (props) => (
       <SEO title="Home" />
       <Navbar />
       <BackgroundImage fluid={props.data.indexImage.childImageSharp.fluid} className="parallax">
-         <LandingPage>
+         <LandingPage >
             <Header>
-               {/* <HeaderTitle>CrypVis</HeaderTitle> */}
+               <HeaderTitle as={motion.div}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 1, duration: 1, type: "spring", stiffness: 100 }}
+               >
+                  <DiOpensource />
+               </HeaderTitle>
             </Header>
          </LandingPage>
       </BackgroundImage>
 
       <AboutPage>
-         <AboutImgCont>
+         <AboutImgCont as={motion.div}
+            whileHover={{ rotate: 10 }}
+         >
             <AboutImgIcon />
             CRYPVIS
          </AboutImgCont>

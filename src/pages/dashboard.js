@@ -27,8 +27,8 @@ import { BiArrowBack } from 'react-icons/bi'
 
 const Dashboard = () => {
 
-   const user = useContext(AuthContext);
-   console.log(user);
+   const data = useContext(AuthContext);
+   console.log(data);
 
    const [isFlipped, setIsFlipped] = useState(false);
 
@@ -45,7 +45,7 @@ const Dashboard = () => {
             <DashContainer>
                <DashHeading>
                   <HeadingUser>
-                     <UserDesc>Hello, {user.user.user.email}!</UserDesc>
+                     <UserDesc>Hello, {data.user.user.email}!</UserDesc>
                   </HeadingUser>
                   <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                      <Update>

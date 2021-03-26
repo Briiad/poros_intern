@@ -23,6 +23,12 @@ export const SignContainer = styled.div`
    display: flex;
    align-items: center;
    background-color: rgba(40,40,40,0.6);
+
+   @media screen and (max-width: 960px){
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+   }
 `
 
 export const FormContainer = styled.div`
@@ -34,6 +40,13 @@ export const FormContainer = styled.div`
    flex-direction: column;
    padding: 1rem;
    border-right: 5px solid #1a1a1a;
+
+   @media screen and (max-width: 960px){
+      width: 70%;
+      height: 70%;
+      border-right: none;
+      border-bottom: 5px solid #1a1a1a;
+   }
 `
 
 export const SignHeader = styled.h1`
@@ -93,4 +106,9 @@ export const RedirToLogin = styled(Link)`
 export const InfoContainer = styled.div`
    width: 55%;
    height: 100%;
+
+   @media screen and ( max-width: 960px){
+      width: 100%;
+      height: 30%;
+   }
 `

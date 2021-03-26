@@ -5,6 +5,8 @@ export const LandingPage = styled.section`
    height: 100vh;
    width: 100%;
    display: flex;
+   justify-content: center;
+   align-items: center;
    background-color: rgba(0, 0, 0, 0.6);
    overflow-y: scroll;
    overflow-x: hidden;
@@ -16,11 +18,25 @@ export const Header = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
 `
 
 export const HeaderTitle = styled.h1`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 170px;
+   height: 170px;
    font-family: var(--poppins);
    color: var(--option-primary);
+   font-size: 10rem;
+`
+
+export const HeaderSub = styled.p`
+   font-family: var(--poppins);
+   color: var(--option-primary);
+   font-size: 1.25rem;
+   font-weight: 600;
 `
 
 export const AboutPage = styled.section`
@@ -33,6 +49,11 @@ export const AboutPage = styled.section`
    background-color: #1a1a1a;
    overflow-y: scroll;
    overflow-x: hidden;
+
+   @media screen and ( max-width: 960px){
+      height: 100%;
+      flex-direction: column-reverse;
+   }
 `
 
 export const AboutImgCont = styled.div`
@@ -47,6 +68,13 @@ export const AboutImgCont = styled.div`
    font-weight: 700;
    background-color: rgba(9,9,9,0.6);
    border-radius: 7px;
+
+   @media screen and ( max-width: 960px){
+      width: 200px;
+      height: 200px;
+      font-size: 1.5rem;
+      margin: 2rem;
+   }
 `
 
 export const AboutImgIcon = styled(DiOpensource)`
@@ -61,6 +89,11 @@ export const AboutDesc = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
+
+   @media screen and ( max-width: 960px){
+      width: 100%;
+      text-align: center;
+   }
 `
 
 export const AboutH1 = styled.h1`
@@ -69,9 +102,15 @@ export const AboutH1 = styled.h1`
    color: var(--option-primary);
 `
 export const AboutP = styled.p`
-   font-family: var(--inter);
+   font-family: var(--poppins);
    color: var(--option-primary);
    text-align: justify;
+
+   @media screen and (max-width: 960px){
+      text-align: center;
+      font-size: 14px;
+      margin: 1rem;
+   }
 `
 
 export const GoldSpan = styled.span`
@@ -85,6 +124,11 @@ export const FeaturesPage = styled.section`
    justify-content: space-around;
    align-items: center;
    background-color: #1a1a1a;
+
+   @media screen and ( max-width: 960px){
+      height: 100%;
+      flex-direction: column;
+   }
 `
 
 export const FeatureHeader = styled.div`
@@ -94,11 +138,21 @@ export const FeatureHeader = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+
+   @media screen and ( max-width: 960px){
+      margin-top: 4rem;
+      width: 100%;
+      margin-bottom: 2rem;
+   }
 `
 
 export const FeatureHeaderH1 = styled.h1`
    color: var(--option-primary);
    font-size: 32px;
+
+   @media screen and ( max-width: 960px){
+      font-size: 18px;
+   }
 `
 
 export const FeatureMenu = styled.div`
@@ -111,6 +165,11 @@ export const FeatureMenu = styled.div`
    row-gap: 40px;
    padding: 1rem;
    justify-content: center;
+
+   @media screen and ( max-width: 960px){
+      grid-template-columns: 120px 120px;
+      grid-template-rows: 120px 120px;
+   }
 `
 
 export const FeatureItems = styled.div`
@@ -138,6 +197,11 @@ export const DashHeader = styled.h1`
    font-family: var(--poppins);
    color: var(--option-primary);
    font-size: 4rem;
+
+   @media screen and ( max-width: 960px){
+      font-size: 2rem;
+      margin-bottom: 2rem;
+   }
 `
 
 export const DashBtn = styled.button`
@@ -156,6 +220,11 @@ export const DashBtn = styled.button`
       background-color: var(--text-secondary);
       color: var(--option-primary);
       transition: all 0.2s ease;
+   }
+
+   @media screen and ( max-width: 960px){
+      width: 70%;
+      padding: 0.75rem;
    }
 `
 
