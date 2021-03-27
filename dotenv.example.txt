@@ -1,0 +1,6 @@
+apiKey=AIzaSyBkoWtTXtl0DJSTzSBgpcqEbZ88-nvEU44
+authDomain=porosintern.firebaseapp.com
+projectId=porosintern
+storageBucket=porosintern.appspot.com
+messagingSenderId=330878324722
+appId=1:330878324722:web:89c4414e4bba185be7656b
