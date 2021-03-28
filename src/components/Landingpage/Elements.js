@@ -230,7 +230,100 @@ export const DashBtn = styled.button`
 
 export const Footer = styled.section`
    width : 100%;
-   height : 40vh;
+   height : 70vh;
    display: flex;
+   flex-direction: column;
    background-color: #2e2e2e;
+
+   @media screen and (max-width: 960px){
+      height: 120vh;
+   }
+`
+
+export const FooterWrap = styled.div`
+   width: 100%;
+   height: 90%;
+   padding: 4rem;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+
+   @media screen and (max-width: 960px){
+      flex-direction: column;
+   }
+`
+
+export const FooterProduct = styled.div`
+   width: 30%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+
+   @media screen and (max-width: 960px){
+      width: 100%;
+      align-items: center;
+      padding: 1.5rem;
+   }
+`
+
+export const ProdLogo = styled.div`
+   display: flex;
+   align-items: center;
+`
+
+export const ProdIcon = styled(DiOpensource)`
+   color: var(--text-secondary);
+   font-size: 3rem;
+`
+
+export const ProdH1 = styled.h1`
+   font-family: var(--poppins);
+   font-size: 24px;
+   color: var(--text-secondary);
+`
+
+export const ProdSoc = styled.div`
+   width: 50%;
+   display: flex;
+   justify-content: space-around;
+   color: var(--text-secondary);
+   font-size: 1.25rem;
+`
+
+export const FooterComp = styled.div`
+   width: 30%;
+   height: 100%;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+`
+
+export const FooterCopy = styled.div`
+   width: 100%;
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+`
+
+export const CopyP = styled.p`
+   font-family: var(--poppins);
+   font-size: 12px;
+   color: var(--option-primary);
+`
+
+export const H1 = styled.h1`
+   font-family: var(--poppins);
+   font-size: 14px;
+   color: var(--text-secondary);
+   margin-bottom: 2rem;
+`
+
+export const P = styled.p`
+   font-family: var(--poppins);
+   font-size: 12px;
+   color: var(--option-primary);
+   margin: 5px 0;
 `

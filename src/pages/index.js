@@ -13,6 +13,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from '../components/Navbar'
 import { DiOpensource } from 'react-icons/di'
+import { AiOutlineInstagram, AiOutlineFacebook, AiOutlineYoutube, AiOutlineGithub } from 'react-icons/ai'
 
 //STYLED COMPONENTS
 import {
@@ -35,7 +36,18 @@ import {
    FeatureHeaderH1,
    DashHeader,
    DashBtn,
-   HeaderSub,
+   FooterWrap,
+   FooterProduct,
+   FooterCopy,
+   FooterComp,
+   CopyP,
+   H1,
+   P,
+   ProdLogo,
+   ProdIcon,
+   ProdH1,
+   ProdSoc,
+
 } from '../components/Landingpage/Elements'
 
 const IndexPage = (props) => (
@@ -94,7 +106,42 @@ const IndexPage = (props) => (
          <DashBtn>Be a user!</DashBtn>
       </DashboardPage>
       <Footer>
+         <FooterWrap>
+            <FooterProduct>
+               <ProdLogo>
+                  <ProdIcon />
+                  <ProdH1>CRYPVIS</ProdH1>
+               </ProdLogo>
 
+               <ProdSoc>
+                  <AiOutlineInstagram />
+                  <AiOutlineGithub />
+                  <AiOutlineFacebook />
+                  <AiOutlineYoutube />
+               </ProdSoc>
+            </FooterProduct>
+
+            <FooterComp>
+               <H1>Support</H1>
+               <P>Contact Us</P>
+               <P>About Crypvis</P>
+               <P>FAQ</P>
+            </FooterComp>
+
+            <FooterComp>
+               <H1>Resource</H1>
+               <P>Unsplash</P>
+               <P>Freepik</P>
+               <P>CoinGecko</P>
+               <P>CoinGecko</P>
+               <P>Gatsby</P>
+               <P>Netlify</P>
+            </FooterComp>
+
+         </FooterWrap>
+         <FooterCopy>
+            <CopyP>Copyright&#169;2021 - Crypvis Team</CopyP>
+         </FooterCopy>
       </Footer>
    </Layout >
 )

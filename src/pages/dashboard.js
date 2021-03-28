@@ -19,6 +19,7 @@ import {
    UpdateBack,
    BackBtn,
    BackDesc,
+   UserWel,
 
 } from '../components/Dashboard/Element'
 
@@ -45,7 +46,8 @@ const Dashboard = () => {
             <DashContainer>
                <DashHeading>
                   <HeadingUser>
-                     <UserDesc>Hello, {data.user.user.email}!</UserDesc>
+                     <UserWel>Welcome,</UserWel>
+                     <UserDesc>User!</UserDesc>
                   </HeadingUser>
                   <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                      <Update>

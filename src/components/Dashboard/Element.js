@@ -81,11 +81,18 @@ export const HeadingUser = styled.div`
    width: 65%;
    height: 65%;
    display: flex;
+   flex-direction: column;
 `
 
-export const UserDesc = styled.h1`
+export const UserWel = styled.h1`
    font-family: var(--poppins);
    color: var(--option-primary);
+`
+
+export const UserDesc = styled.p`
+   font-family: var(--poppins);
+   color: var(--text-secondary);
+   font-weight: 600;
 `
 
 export const DashArticle = styled.div`
