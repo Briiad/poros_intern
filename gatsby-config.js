@@ -1,4 +1,6 @@
-require('dotenv').config()
+require('dotenv').config({
+   path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
    siteMetadata: {
       title: `CrypVis`,
@@ -38,12 +40,12 @@ module.exports = {
          resolve: 'gatsby-plugin-firebase',
          options: {
             credentials: {
-               apiKey: process.env.apiKey,
-               authDomain: process.env.authDomain,
-               projectId: process.env.projectId,
-               storageBucket: process.env.storageBucket,
-               messagingSenderId: process.env.messagingSenderId,
-               appId: process.env.appId,
+               apiKey: process.env.GATSBY_API_KEY,
+               authDomain: process.env.GATSBY_AUTH_DOMAIN,
+               projectId: process.env.GATSBY_PROJECT_ID,
+               storageBucket: process.env.GATSBY_STORAGE_BUCKET,
+               messagingSenderId: process.env.GATBY_MESSAGING_SENDER_I,
+               appId: process.env.GATSBY_APP_ID,
             }
          }
       },
